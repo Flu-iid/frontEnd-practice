@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background-color: lemonchiffon;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    padding: 100px;
+    color: brown;
+    text-shadow: 5px 5px 5px green;
+
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll {
+    overflow: scroll;
+}
+
+.noScroll {
+    overflow: hidden;
+}
+
+p {
+    text-align: center;
+    height: 300px;
+    width: 200px;
+    background-color: whitesmoke;
+    border: 5px solid red;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 5px grey;
+    flex: 1 1;
+}
+
+@media (min-width:400px) and (max-width:800px) {
+    main {
+        background-color: black;
+        color: white;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    p {
+        background-color: black;
+    }
+}

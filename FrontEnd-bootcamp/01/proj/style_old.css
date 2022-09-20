@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    color: #1F4690;
+}
+
+body {
+    background-color: #FFE5B4;
+}
+
+ul{
+    margin: 0px;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 150px;
+    list-style: none;
+    background-color: #1F4690;
+    font-weight: 800;
+}
+
+.nav-link {
+    font-size: 32px;
+    color: #FFA500;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px 100px;
+}
+
+section {
+    padding-top: 60px;
+}
+
+.section-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 0px 100px;
+}
+
+.section1 p {
+    font-size: 18px;
+}
+
+img {
+    border: 2px solid #3A5BA0;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 1px #3A5BA0;
+    height: 100px;
+    width: 100px;
+}
+
+.img-main {
+    height: 100px;
+    width: 200px;
+}
+
+h1, h2 {
+    font-size: 24px;
+    text-shadow: 2px 2px 5px #3A5BA0;
+}
+
+.section2-content {
+    justify-content: space-between;
+}
+
+.section2-subcontent{
+    text-align: center;
+}
+
+button {
+    background-color: #3A5BA0;
+    color: #FFE5B4;
+    border: 2px solid #3A5BA0;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
+}
+
+button:hover {
+    background-color: #FFA500;
+    color: #1F4690;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.section3-content {
+    flex-direction: column;
+}
+
+.section3-subcontent {
+    background-color: #3A5BA0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    /* margin: 0px -200px; */
+    /* padding: 50px 200px; */
+    
+}
+
+.section3-subcontent-reverse {
+    background-color: #FFE5B4;
+    flex-direction: row-reverse;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:700px) {
+    ul {
+        flex-wrap: wrap;
+        padding: 5px 50px;
+    }
+
+    .nav-link {
+        font-size: 24px;
+    }
+
+    main {
+        padding: 10px 10px;
+    }
+
+    .section-main {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1,
+    h2,
+    p {
+        text-align: center;
+    }
+
+    h1, h2 {
+        font-size: 20px;
+    }
+}
+
+

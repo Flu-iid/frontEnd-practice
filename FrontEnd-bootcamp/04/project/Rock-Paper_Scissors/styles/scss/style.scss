@@ -1,0 +1,58 @@
+$color1: #C2DED1;
+$color2: #ECE5C7;
+$color3: #CDC2AE;
+$color4: #354259;
+
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $color2;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+
+
+
+
+
+// #gameSet {
+// }
+
+// #gameMain{
+//     display: none;
+// }
+
+// #gameFinish{
+//     display: none;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    position: fixed;
+    background-color: $color4;
+    padding: 5px 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+

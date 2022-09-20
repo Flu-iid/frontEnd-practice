@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Maker!</title>
+    <link rel="stylesheet" href="../../normalize.css">
+    <link rel="stylesheet" href="./style/css/style.css">
+</head>
+<body>
+    <h1>Prime Maker</h1>
+
+    <main>
+        <h2>Give your array properties</h2>
+        <form onsubmit="return false;">
+            <div class="content" id="content">
+                <section>
+                    <label for="start">start</label>
+                    <input id="start" name="start"></input>
+                </section>
+                <section>
+                    <label for="end">end</label>
+                    <input id="end" name="end"></input>
+                </section>
+                <section>
+                    <label for="step">step</label>
+                    <input id="step" name="step"></input>
+                </section>
+            </div>
+            <div id="result">
+                <section>
+                    <h4>prime array</h4>
+                    <p id="array"></p>
+                </section>
+                <section>
+                    <h4>count</h4>
+                    <p id="count"></p>
+                </section>
+                <section>
+                    <h4>sum</h4>
+                    <p id="sum"></p>
+                </section>
+            </div>
+            <div class="buttons">
+            <button><a href=".">Home</a></button>
+            <button onclick="nextScript()">Next</button>
+            </div>
+        </form>
+    </main>
+
+    <pre id="code">
+function arrayMaker(start, end, step) {
+    var array = [];
+    for (var i = start; i <= end; i += step){
+        array.push(i)
+    }
+    return array
+}
+
+function checkPrime (number) {
+    if (number < 2) {
+        return false;
+      } else {
+        for (var i = 2; i < number; i++) {
+          if (number % i == 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+}
+
+var startVal = 1
+var endVal = 1000
+var stepVal = 1
+
+var numbers = arrayMaker(startVal, endVal, stepVal)
+
+var primeNumbers = numbers.filter(function(item){
+    return checkPrime(item)
+})
+
+var sum = primeNumbers.reduce(function(content, y){
+    return content+y
+})
+
+var count = primeNumbers.reduce(function(content, y){
+    return content+=1
+})
+    </pre>
+    <script src="./webscript.js"></script>
+    <script>
+        var content = document.getElementById("content");
+
+        var startVal;
+        var endVal;
+        var stepVal;
+        
+    </script>
+</body>
+</html>

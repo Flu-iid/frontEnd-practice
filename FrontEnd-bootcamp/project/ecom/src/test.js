@@ -1,0 +1,1 @@
+console.log(Array.from({length:10}, (item, index) => index + 1))

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../../normalize.css" />
+        <link rel="stylesheet" href="./styles/css/style.css" />
+        <title>Rock-Paper-Scissors</title>
+    </head>
+    <body>
+        <nav>
+            <h1>Rock-Paper-Scissors</h1>
+        </nav>
+        <main>
+            <section class="set" id="gameSet">
+				<form onsubmit="return false;">
+                	<label for="setNumber">Please select number of sets you wanna play!</label>
+                	<input type="number" min="1" max="9" step="2" id="setNumber" style="display: block;">
+                	<button onclick="GameSet()" type="submit">Submit</button>
+				</form>
+            </section>
+            <section class="container" id="gameMain">
+                <section class="score">
+                    <section class="Computer">
+                        Computer: <span id="computerScore">0</span>
+                    </section>
+                    <section class="player">
+                        Player: <span id="playerScore">0</span>
+                    </section>
+                </section>
+                <section class="game">
+                    <button class="item-rock game" title="Rock" onclick="Call(`rock`)">
+                        <img
+                            src="./img/rock_39413.png"
+                            alt="Rock"
+                            draggable="false"
+                        />
+                    </button>
+                    <button class="item-paper game" title="Paper" onclick="Call(`paper`)">
+                        <img
+                            src="./img/paper_hand_icon_194949.png"
+                            alt="Paper"
+                            draggable="false"
+                        />
+                    </button>
+                    <button class="item-scissor game" title="Scissor" onclick="Call(`Scissor`)">
+                        <img
+                            src="./img/hand_peace_icon_199116.png"
+                            alt="Scissor"
+                            draggable="false"
+                        />
+                    </button>
+                </section>
+            </section>
+            <section class="finish" id="gameFinish">
+                <h2>Final Score: <span id="finalScore"></span></h2>
+            	<button>Reset</button>
+            </section>
+        </main>
+        <footer>&copy;Flu-iid</footer>
+        <script src="./main.js"></script>
+    </body>
+</html>

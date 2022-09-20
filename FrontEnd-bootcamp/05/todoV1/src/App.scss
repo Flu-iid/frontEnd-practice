@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+
+body {
+    background-image: url(../img/The_Creation_of_Adam.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.App {
+    height: 100%;
+    text-align: center;
+    
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        h1 {
+            font-size: 30px;
+        }
+    
+        .input-container {
+            display: flex;
+            gap: 10px;
+    
+            .input-box {
+                width: 600px;
+                height: 3em;
+            }
+    
+            button#add {
+                border-radius: 50%;
+                height: 3em;
+                width: 3em;
+            }
+        }
+    
+        .checklist {
+            width: 400px;
+        }
+    
+        #reset {
+            border-radius: 5px;
+            width: 200px;
+            height: 2em;
+        }
+
+
+
+    }
+}
+

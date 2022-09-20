@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Random canvas circles</title>
+        <style>
+            html {
+                width: 100%;
+                height: inherit;
+            }
+
+            canvas {
+                display: block;
+            }
+
+            body {
+                margin: 0;
+                background-color: navy;
+            }
+
+            button {
+                position: absolute;
+                top: 5px;
+                left: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas></canvas>
+
+        <script>
+            const canvas = document.querySelector("canvas");
+            const ctx = canvas.getContext("2d");
+
+            let WIDTH = window.innerWidth;
+            let HEIGHT = window.innerHeight;
+
+
+            canvas.width = WIDTH;
+            canvas.height = HEIGHT;
+
+            const random = (number) => {
+                return Math.floor(Math.random() * number);
+            };
+
+            const draw = (n = 100) => {
+                ctx.clearRect(0, 0, WIDTH, HEIGHT);
+                for (let i = 0; i < n; i++) {
+                    ctx.beginPath();
+                    ctx.fillStyle = "rgba(255,0,0,0.5)";
+                    ctx.arc(
+                        random(WIDTH),
+                        random(HEIGHT),
+                        random(50),
+                        0,
+                        2 * Math.PI
+                    );
+                    ctx.fill();
+                }
+            };
+
+            addEventListener("load", () => {
+                setInterval(() => {
+                    draw();
+                }, 500);
+            });
+
+            window.addEventListener("resize", (e) => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                console.log(window.innerHeight)
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+# html
+## Table
+    drawing table
+    <table>
+        <tr>
+            <th>
+            a
+            </th>
+        </tr>
+        <tr>
+            <td>
+                d
+            </td>
+        </tr>
+    </table>
+
+    ```
+    <table>
+        <tr>
+            <th>
+            a
+            </th>
+        </tr>
+        <tr>
+            <td>
+                d
+            </td>
+        </tr>
+    </table>
+    ```
+    and also 
+    ```
+    <thead>
+    <tbody>
+    <tfoot>
+    ```
+
+## Form
+ + action
+ + method  
+
+ not used anymore
+ ### input type tags
+ + text
+ + email
+ + password
+
+_label (for) id on what u want it for_  
+_reset and submit button_  
+_value_  
+_readonly_  
+_disable_
+
+## iframe
+decrease SEO
+```
+loading="lazy"
+```
+## figure
++ img
++ figcaption
+
+## meta
+### author
+```
+<meta name="author" content="John Doe">
+```
+### description
+```
+<meta name="description" content="...">
+```
+## pre
+
+# css
+## text-height
+
