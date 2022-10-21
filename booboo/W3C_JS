@@ -1,0 +1,343 @@
+W3Cjavascript
+
+document.getElementById(id).innerHTML = "fjffl";
+document.getElementById(id).src = "dfsfjsfsfk";
+document.getElementById(id).style.fontsize = "47234px";
+document.getElementById(id).style.display = "none";
+document.getElementById(id).style.display = "block";
+
+
+in HTML both head or body 1. <inside <script>#function myfunc() {}#</script> 2. inside elements
+in .js files no need for <script> just function   <script src="myScript.js"></script> 
+
+JS display
+	innerHTML
+	document.write() #for testing the script
+	windows.alert() / alert()
+	console.log() #for browser console
+	
+	
+JS syntaxes
+	JS goes with summing(additioning) strings but doesnt multiply them like python
+	var x = "sam "; y = x + x; Correct
+	x*2 not correct (NaN Error)
+	
+Comments
+	// for single line
+	/* */ for multiple runs
+	using comment to prevent execution is good way to control and test codes
+	
+Variables
+	const ... (from2015)
+		a var that cant be changed
+	let ... (from 2015)
+		a var under restricted scope
+	
+	Its good practice to declare all var at beggining of the script
+	
+	You can declare multiple variables in one statement:
+	var person = "John Doe", carName = "Volvo", price = 200;
+	or
+	var person = "John Doe",
+	carName = "Volvo",
+	price = 200;
+	
+	If you put a number in quotes rest of numbers will be treated as string as well:
+	var x = "5" + 2 + 3; will be "523" as a string ( and 2 + 3 + "5" will be "55")
+	*** so Number and string summing will result a string!
+	
+Arithmetic
+	Addition,Subtraction,Multiplication,Division,Incrementing,Decrementing,Expontiation
+	50 + 10
+	50 and 10 are "Operand" and + is "operator"
+	
+	Division makes 2 values : "Quotient" , "Remainder"
+	
+	** JS operation Precedents : https://www.w3schools.com/js/js_arithmetic.asp
+	
+	
+Data Types
+	any var can be set to undefined by just making it.
+	var x = undefined;
+	u can set it to null as well
+	btw null is object in JS :(
+	
+	typeof undefined           // undefined
+	typeof null                // object
+
+	null === undefined         // false
+	null == undefined          // true 
+	
+	typeof primitive data are string, number, boolean,undefined
+	typeof complex data are function, object
+	
+Functions
+	** Accessing a functiong without () will give the function as result:
+	function toCelsius(fahrenheit) {
+	  return (5/9) * (fahrenheit-32);
+	}
+	document.getElementById("demo").innerHTML = toCelsius; 
+	// function toCelsius(f) { return (5/9) * (f-32); }
+	
+	
+	Local var are for inside the function.
+	Local variables are created when a function starts, and deleted when the function is
+	completed.
+	
+Objects
+	JS objects are variables too but they contain properties{name:"value",}
+	
+Strings
+    length
+    var x = "txt";
+    txt.length;
+
+    escape charecter
+    \" > "
+    \' > '
+    \\ > \
+    these ones are from fax era they make no sense in HTML:
+    \b Backspace
+    \f Form Feed(Page Break)
+    \n New Line
+    \r Carriage Return
+    \t Horizontal Tabulator
+    \v Vertical Tabulator
+
+    - U can break linein strings with a \ in <script>
+    "Hle \
+    dvjdf"
+    for visual break "<br>"
+    
+    var x = new String("John");var y = new String("John");
+    x===y False *** JS objects cannot be compared
+
+    Index
+    txt.indexOf("word");
+    txt.LastIndexOf("word", ); **check spellings and this one searches 
+    from end to beginning.
+    - If not found both will return -1
+    LastIndexOf("word", 15) can get another parameter.it indicates from 
+    where it ill start its backard search.
+
+    txt.search("word") is different from indexOf()
+
+	slice(start, end) can recieve negative value
+	substring(start, end) only 0 and poistive value
+	substr(start, length)
+	
+	replace("Value", "Value")
+		this method is case sensitive and only replaces the first match
+	replace(/Value/i, "Value") for case insensitivity (i = insensitive)
+	replace(/Value/g, "Value") for searching all matches (g = global match)
+	
+	toLowerCase()
+	toUpperCase()
+	
+	Concat("Value", "Value")
+		var text1 = "Hello";
+		var text2 = "World";
+		var text3 = text1.concat(" ", text2);
+		
+	trim("Value") removes extra white space from both sides of string
+	
+	padStart("Value", "Value")
+	padEnd("Value", "Value")
+	
+	let str = "5";
+	str = str.padStart(4,0);
+	// result is 0005 
+	
+	let str = "5";
+	str = str.padEnd(4,0);
+	// result is 5000
+	
+	charAt(index)   returns the string index
+	charCodeAt(index)    returns the string unicode UTF-16
+	[index]
+		
+		var str = "HELLO WORLD";
+		str[0];                   // returns H 
+	
+		var str = "HELLO WORLD";
+		str[0] = "A";             // Gives no error, but does not work
+		str[0];                   // returns H 
+	
+	split()
+		var txt = "a,b,c,d,e";   // String
+		txt.split(",");          // Split on commas
+		txt.split(" ");          // Split on spaces
+		txt.split("|");          // Split on pipe 
+		
+Numbers
+	JS uses 64bit Floating point numbers
+		var x = 123e5;    // 12300000
+		var y = 123e-5;   // 0.00123
+		
+	The maximum number of decimals is 17, but floating point arithmetic 
+	is not always 100% accurate
+	
+		var x = 0.2 + 0.1;         // x will be 0.30000000000000004 
+	
+	*** to solve the above problem its better to multiply and divide:
+	
+		var x = (0.2 * 10 + 0.1 * 10) / 10;       // x will be 0.3 
+		
+	** JS will try to convert numeric strings to numbers in numeric operations:
+	
+		var x = "100";
+		var y = "10";
+		var z = x / y;       // z will be 10 	
+		
+		var x = "100";
+		var y = "10";
+		var z = x * y;       // z will be 1000 
+	
+		var x = "100";
+		var y = "10";
+		var z = x - y;       // z will be 90 
+	
+		var x = "100";
+		var y = "10";
+		var z = x + y;       // z will not be 110 (It will be 10010) 
+	
+	NaN
+	
+		var x = 100 / "Apple";  // x will be NaN (Not a Number)
+		
+		var x = 100 / "10";     // x will be 10 
+	
+		var x = 100 / "Apple";
+		isNaN(x);               // returns true because x is Not a Number 
+	
+		var x = NaN;
+		var y = 5;
+		var z = x + y;         // z will be NaN 
+		
+		var x = NaN;
+		var y = "5";
+		var z = x + y;         // z will be NaN5 
+		
+		typeof NaN;            // returns "number" 
+		
+	Infinity or -Infinity
+		
+		var myNumber = 2;
+		while (myNumber != Infinity) {   // Execute until Infinity
+		  myNumber = myNumber * myNumber;
+		} 
+		**Calculates 10 times last one Infinity
+		
+		var x =  2 / 0;       // x will be Infinity
+		var y = -2 / 0;       // y will be -Infinity 
+		
+		typeof Infinity;     // returns "number" 
+		
+	Hexadecimal
+		var x = 0xFF;        // x will be 255 
+		**0x means the number is hex
+		***never writ number leading with zero in JS. some versions 
+		will think of it as octal
+		
+		toString(Number)
+		var myNumber = 32;
+		myNumber.toString(10);  // returns 32
+		myNumber.toString(32);  // returns 10
+		myNumber.toString(16);  // returns 20
+		myNumber.toString(8);   // returns 40
+		myNumber.toString(2);   // returns 100000
+		
+		** results are all string
+		
+		Do not create Number objects. It slows down execution speed.
+		The new keyword complicates the code. This can produce some unexpected results:
+
+		var x = 123;
+		var y = new Number(123);
+
+		// typeof x returns number
+		// typeof y returns object 
+		
+		var x = 500;             
+		var y = new Number(500);
+
+		// (x == y) is true because x and y have equal values 
+		
+		var x = new Number(500);             
+		var y = new Number(500);
+
+		// (x == y) is false because objects cannot be compared 
+		
+		
+		Comparing 2 objects in JS is always false
+		
+		toExponential(Number)
+			var x = 9.656;
+			x.toExponential(2);     // returns 9.66e+0
+			x.toExponential(4);     // returns 9.6560e+0
+			x.toExponential(6);     // returns 9.656000e+0
+			
+		toString(Number)  ** returns all as Strings
+			var x = 123;
+			x.toString();            // returns 123 from variable x
+			(123).toString();        // returns 123 from literal 123
+			(100 + 23).toString();   // returns 123 from expression 100 + 23 	
+
+			
+		toFixed()
+			var x = 9.656;
+			x.toFixed(0);           // returns 10
+			x.toFixed(2);           // returns 9.66
+			x.toFixed(4);           // returns 9.6560
+			x.toFixed(6);           // returns 9.656000 
+		
+		toPrecision()
+			var x = 9.656;
+			x.toPrecision();        // returns 9.656
+			x.toPrecision(2);       // returns 9.7
+			x.toPrecision(4);       // returns 9.656
+			x.toPrecision(6);       // returns 9.65600 
+			
+		valueOf()    ** returns all as Numbers   **Converts number Obj to Primitive
+			var x = 123;
+			x.valueOf();            // returns 123 from variable x
+			(123).valueOf();        // returns 123 from literal 123
+			(100 + 23).valueOf();   // returns 123 from expression 100 + 23 
+			
+		***All JavaScript data types have a valueOf() and a toString() method.
+		
+		*Number()  returns Number.if it cant convert it will return NaN
+			this method can be used in dates as well
+			Number(new Date("2017-09-30"));    // returns 1506729600000
+			returns the number of miliseconds since 1.1.1970
+			
+		ParseInt()     parses a string and returns a number. Spaces are allowed. Only the 					first number is returned:           
+		
+				parseInt("10");         // returns 10
+				parseInt("10.33");      // returns 10
+				parseInt("10 20 30");   // returns 10
+				parseInt("10 years");   // returns 10
+				parseInt("years 10");   // returns NaN  
+		
+		ParseFloat()   
+		
+				parseFloat("10");        // returns 10
+				parseFloat("10.33");     // returns 10.33
+				parseFloat("10 20 30");  // returns 10
+				parseFloat("10 years");  // returns 10
+				parseFloat("years 10");  // returns NaN 
+		
+		*** these 3 are global JS methods (whatever that means :D)
+		
+		Number Properties
+		
+		MAX_VALUE 	Returns the largest number possible in JavaScript
+		MIN_VALUE 	Returns the smallest number possible in JavaScript
+		POSITIVE_INFINITY 	Represents infinity (returned on overflow)
+		NEGATIVE_INFINITY 	Represents negative infinity (returned on overflow)
+		NaN 	Represents a "Not-a-Number" value
+		
+Array
+	var array1 = ["a", a:"John", 12]
+	var call = array1[0]
+	var array2 = {
