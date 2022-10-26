@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+// import { Button } from "react-bootstrap";
+// import TodoInput from "./components/TodoInput";
+// import TodoList from "./components/TodoList";
+
 
 function App() {
+  const [show, setShow] = useState("")
+  const [list, setList] = useState([])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <form onSubmit={(e) => { e.preventDefault() }}>
+        <input type="text" value={show} onChange={(e) => { setShow(e.target.value) }}/>
+        <button onClick={console.log("why on click gets run :(")}>Add</button>
+      </form>
+      <p>{list}</p>
     </div>
   );
 }
