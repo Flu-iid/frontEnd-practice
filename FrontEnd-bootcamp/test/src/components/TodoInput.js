@@ -1,10 +1,16 @@
 function TodoInput({ show, setShow, setList }) {
   const addToList = (item) => {
     if (item) {
-      setList((last) => [
-        ...last,
-        { id: 0, text: item, editable: false, finished: false },
-      ]);
+      setList((last) => {
+        const help = [...last];
+        help.push({
+          id: last.length ? (last[last.length-1].id + 1) : 1,
+          text: item,
+          editable: false,
+          finished: false,
+        });
+        return help;
+      });
       setShow("");
     }
   };

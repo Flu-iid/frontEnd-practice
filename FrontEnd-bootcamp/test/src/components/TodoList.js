@@ -11,7 +11,7 @@ function TodoList({ list, setList, edit, setEdit }) {
             {item.editable ? (
               <input
                 type="text"
-                value={item.text}
+                value={edit}
                 onChange={(e) => {
                   setEdit(e.target.value);
                 }}
@@ -22,14 +22,30 @@ function TodoList({ list, setList, edit, setEdit }) {
             <span></span>
             <button
               onClick={() => {
-                item.editable = !item.editable;
-                setEdit(edit)
+                if (item.editable) {
+                  item.text = edit;
+                  item.editable = false;
+                } else if (!item.editable) {
+                  setEdit(item.text);
+                  item.editable = true;
+                }
+                setList((last) => [...last]);
               }}
             >
               Edit
             </button>
             <span></span>
-            <button onClick={() => console.log(item.finished)}>Fine</button>
+            <button
+              onClick={() => {
+                setList((last) => {
+                  const help = [...last];
+                  help.splice(index, 1);
+                  return help;
+                });
+              }}
+            >
+              Fine
+            </button>
             <span></span>
           </div>
         );

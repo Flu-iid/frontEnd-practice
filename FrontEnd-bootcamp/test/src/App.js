@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <TodoInput show={show} setShow={setShow} setList={setList} />
-      <TodoList list={list} setList={setList} edit={edit} setEdit={setEdit}/>
+      <TodoList list={list} setList={setList} edit={edit} setEdit={setEdit} />
     </div>
   );
 }
