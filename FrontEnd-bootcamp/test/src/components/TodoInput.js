@@ -1,10 +1,10 @@
-function TodoInput({ show, setShow, setList }) {
+function TodoInput({ show, setShow, setList, Form, Button }) {
   const addToList = (item) => {
     if (item) {
       setList((last) => {
         const help = [...last];
         help.push({
-          id: last.length ? (last[last.length-1].id + 1) : 1,
+          id: last.length ? last[last.length - 1].id + 1 : 1,
           text: item,
           editable: false,
           finished: false,
@@ -17,7 +17,7 @@ function TodoInput({ show, setShow, setList }) {
 
   return (
     <div>
-      <form
+      <Form
         onSubmit={(e) => {
           e.preventDefault();
         }}
@@ -28,15 +28,17 @@ function TodoInput({ show, setShow, setList }) {
           onChange={(e) => {
             setShow(e.target.value);
           }}
+          autoFocus
         />
         <button
+          
           onClick={() => {
             addToList(show);
           }}
         >
           Add
         </button>
-      </form>
+      </Form>
     </div>
   );
 }
