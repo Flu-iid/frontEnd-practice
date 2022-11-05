@@ -1,7 +1,11 @@
+import Blog from "./components/blog/Blog"
+
+
 function App() {
   return (
     <>
-      <header>
+    <Blog></Blog>
+      {/* <header>
         <nav></nav>
         <div>Lorem ipsum</div>
         <div>Login</div>
@@ -13,9 +17,8 @@ function App() {
         <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ut quas facilis, aliquam asperiores dolorum dolorem aperiam voluptatum veniam distinctio? Voluptatibus aliquam commodi unde dolores soluta sint, eaque at facere!</div>
         <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ut quas facilis, aliquam asperiores dolorum dolorem aperiam voluptatum veniam distinctio? Voluptatibus aliquam commodi unde dolores soluta sint, eaque at facere!</div>
         <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ut quas facilis, aliquam asperiores dolorum dolorem aperiam voluptatum veniam distinctio? Voluptatibus aliquam commodi unde dolores soluta sint, eaque at facere!</div>
-        
       </main>
-      <footer>&copy;</footer>
+      <footer>&copy;</footer> */}
     </>
   );
 }
