@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    cursor: wait;
+}
+
+body {
+    background: black;
+}
+
+.plays {
+    display: flex;
+}
+
+
+.choice {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    background: black;
+    border: 2px solid red;
+    width: 240px;
+    height: 240px;
+    color: white;
+    /* text-align: center; */
+    
+}
+
+.choice p {
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+.choice img {
+    border: 1px solid white;
+    align-self: center;
+    width: 100px;
+    height: 100px;
+}
+
+.choice:hover {
+    background-color: grey;
+    color: rgb(219, 111, 111);
+    cursor: grab;
+}
+
+.choice:active {
+    background: red;
+    cursor: grabbing;
+}
