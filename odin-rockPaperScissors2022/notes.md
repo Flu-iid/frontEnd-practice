@@ -1,0 +1,2 @@
+- prompt page to play with computer or other users
+- find a method to connect users

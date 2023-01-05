@@ -1,4 +1,5 @@
 * {
+    color: white;
     box-sizing: border-box;
     cursor: wait;
 }
@@ -7,8 +8,13 @@ body {
     background: black;
 }
 
+h1 {
+    text-align: center;
+}
+
 .plays {
     display: flex;
+    justify-content: space-around;
 }
 
 
